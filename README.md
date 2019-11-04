@@ -4,7 +4,7 @@ Simple API that fullfills the following stories:
 
 * As a user, I can register
 
-* As auser, I can log in
+* As a user, I can log in
 
 * As a user I can upload an image
 
