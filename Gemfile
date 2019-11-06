@@ -12,6 +12,15 @@ gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 
+# Use Devise for authentication
+gem 'devise'
+
+# Use JWT as authentication token
+gem 'devise-jwt'
+
+# Use Rack::Cors to support to CORS requests
+gem 'rack-cors'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -30,7 +39,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+end
+
+group :test do
+  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
+  gem 'faker'
+  gem 'rack-test'
+  gem 'rubocop-rspec'
 end
 
 group :development do
